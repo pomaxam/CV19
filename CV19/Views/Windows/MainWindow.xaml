@@ -94,7 +94,7 @@
                                         </DataTemplate>
                                     </DataGridTemplateColumn.CellTemplate>
                                     <DataGridTemplateColumn.CellEditingTemplate>
-                                        <DataTemplate DataType="decanat:Student">
+                                        <DataTemplate DataType="decanat:Student"> <!-- Тут закончили -->
                                             <DatePicker SelectedDate="{Binding Birthday}"/>
                                         </DataTemplate>
                                     </DataGridTemplateColumn.CellEditingTemplate>
