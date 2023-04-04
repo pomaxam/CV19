@@ -17,6 +17,20 @@ namespace CV19.ViewModels
 
         public ObservableCollection<Group> Groups { get; }
 
+        #region SelectedGroup : Group - Выбранная группа
+
+        /// <summary>Выбранная группа</summary>
+        private Group _SelectedGroup;
+
+        /// <summary>Выбранная группа</summary>
+        public Group SelectedGroup
+        {
+            get => _SelectedGroup;
+            set => Set(ref _SelectedGroup, value);
+        }
+
+        #endregion
+
         #region SelectedPageIndex : int - Номер выбранной вкладки
 
         /// <summary>Номер выбранной вкладки</summary>
@@ -142,7 +156,7 @@ namespace CV19.ViewModels
 
             var groups = Enumerable.Range(1, 20).Select(i => new Group 
             {
-                Name = $"Группа{i}",
+                Name = $"Группа {i}",
                 Students = new ObservableCollection<Student>(students)
             });
 
